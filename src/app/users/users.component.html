@@ -1,0 +1,16 @@
+
+<nav class="users__nav">
+  <ul class="users__list">
+    <li
+      *ngFor="let user of usersName"
+
+      class="users__item">
+      <a [routerLink]="[user.id]"
+         [routerLinkActive]="'users__link--active'"
+         class="users__link">{{user.name}}</a>
+    </li>
+  </ul>
+</nav>
+
+
+<router-outlet></router-outlet>

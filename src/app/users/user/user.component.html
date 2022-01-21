@@ -1,0 +1,12 @@
+<h1 class="user__name">{{users[id].name}}</h1>
+<ul class="user__post-list">
+  <li class="user__post-item"
+      *ngFor="let post of users[id].posts"
+  >
+    {{post}}
+  </li>
+</ul>
+<div class="action-wrapper">
+  <button (click)="downloadCsv()" class="button button--csv">download as csv</button>
+  <a download [href]="image" class="button button--image">download image</a>
+</div>
